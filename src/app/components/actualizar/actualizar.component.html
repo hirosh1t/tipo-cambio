@@ -1,0 +1,29 @@
+<div class="container">
+    <form>
+      <div class="form-group">
+        <label for="idMonto">Monto</label>
+        <input
+          [(ngModel)]="form.monto"
+          type="text"
+          class="form-control"
+          id="idMonto"
+          name="nMonto"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="idMonedaOrigen">Moneda Origen</label>
+        <select class="form-control"  [(ngModel)]="form.monedaOrigen" name="nMonedaOrigen">
+          <option value="USD">USD</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="idMonedaDestino">Moneda Destino</label>
+        <select class="form-control"  [(ngModel)]="form.monedaDestino" name="nMonedaDestino">
+          <option value="SOL">SOL</option>
+        </select>
+      </div>
+      <button type="submit" (click)="cambiar()" class="btn btn-primary">Actualizar Moneda</button>
+    </form>
+  </div>
+  
